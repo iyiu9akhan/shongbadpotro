@@ -1,2 +1,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@theme {
+    --color-brand :  #C60201;
+}
+/* #A30000 */

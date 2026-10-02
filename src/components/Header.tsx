@@ -1,6 +1,5 @@
 import Image from "next/image";
 import React from "react";
-// import brand_logo from "@/"
 function Header() {
   return (
     <div>
@@ -50,11 +49,11 @@ function Header() {
           </div>
           <a className="" href="#">
             <Image
-              src="/brand_logo.png"
+              src="/logo.png"
               alt="brand_logo"
               width={150}
               height={60}
-              className="h-20 w-auto"
+              className="h-12 w-auto"
             />
           </a>
         </div>
@@ -81,8 +80,9 @@ function Header() {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end gap-5">
+          <a className="hover:text-brand cursor-pointer duration-300 transition-colors">সাইন ইন</a>
+          <a className="btn bg-brand text-white">রেজিস্টার</a>
         </div>
       </div>
     </div>
