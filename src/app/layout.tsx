@@ -19,7 +19,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${notoSerifBengali.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <Header/>
+        <Header />
         {children}
       </body>
     </html>
