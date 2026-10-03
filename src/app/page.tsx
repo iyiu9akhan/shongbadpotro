@@ -9,23 +9,24 @@ export default async function Home() {
   const sections = data.data;
   const mainNews = sections[0].articles;
 
-  const othersSection = sections.slice(1)
-  console.log(othersSection)
+  const othersSection = sections.slice(1);
+  console.log(othersSection);
 
   return (
     <div>
       <Marquee />
-      <div className="grid grid-cols-3 max-w-7xl mx-auto my-3 gap-8">
+      <div className="grid grid-cols-3 max-w-7xl mx-auto my-5 gap-8">
         <div className="col-span-2">
           <MainNews news={mainNews} />
+          <OthersSection othersSection={othersSection} />
         </div>
         <div className="col-span-1">
           <MostRead />
         </div>
       </div>
-      <div>
-        <OthersSection othersSection ={othersSection}/>
-      </div>
+      {/* <div>
+        <OthersSection othersSection={othersSection} />
+      </div> */}
     </div>
   );
 }

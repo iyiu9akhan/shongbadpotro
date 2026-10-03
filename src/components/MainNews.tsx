@@ -8,8 +8,8 @@ interface MainNewsProps {
 const MainNews = ({ news }: MainNewsProps) => {
   const [firstNews, ...othersNews] = news;
   return (
-    <div className="grid gap-4 grid-cols-2">
-      <div className="card rounded-xl border border-gray-200 cursor-pointer group">
+    <div className="grid gap-4 grid-cols-2 mb-10 ">
+      <div className="card rounded-lg border border-gray-200 cursor-pointer group hover:border-red-200 duration-200 transition-all hover:shadow-sm">
         <figure>
           <Image
             className="group-hover:scale-105  duration-200 transition-all"
@@ -19,7 +19,7 @@ const MainNews = ({ news }: MainNewsProps) => {
             alt={firstNews.imageAlt}
           ></Image>
         </figure>
-        <div className="card-body">
+        <div className="card-body ">
           <p className="text-brand">{firstNews.category}</p>
           <h2 className="card-title text-[22px] group-hover:text-brand  duration-200 transition-all">
             {firstNews.title}
@@ -37,7 +37,7 @@ const MainNews = ({ news }: MainNewsProps) => {
           </p>
         </div>
       </div>
-      <div className="rounded-xl overflow-hidden border border-gray-200">
+      <div className="rounded-lg overflow-hidden border border-gray-200">
         {othersNews.slice(0, 4).map((others) => (
           <div
             key={others.id}
