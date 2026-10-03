@@ -36,7 +36,7 @@ function Header() {
           </ul>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <a className="" href="#">
+          <a className="" href="/">
             <Image
               src="/brandLogo.png"
               alt="brand_logo"

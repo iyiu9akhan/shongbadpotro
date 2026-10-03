@@ -17,13 +17,17 @@ const NewsCard = ({ news }: NewsCardProps) => {
           className="hover:scale-105 duration-200 transition-all aspect-video"
         />
       </figure>
-      <div className="card-body p-3">
-        <p>{news.category}</p>
-        <h2 className="card-title line-clamp-2 group-hover:text-brand  duration-200 transition-all">
+      <div className="p-3">
+        <p className="text-brand text-sm mb-2">{news.category}</p>
+        <h2 className="text-lg font-bold group-hover:text-brand  duration-200 transition-all mb-2 line-clamp-2">
           {news.title}
         </h2>
-        <p className="line-clamp-2 text-black/70">{news.description}</p>
-        <p className="text-brand">
+        <div className="overflow-hidden">
+          <p className="line-clamp-2 leading-6 text-black/70 mb-3">
+            {news.description}
+          </p>
+        </div>
+        <p className="text-brand text-sm">
           {new Date(news.firstPublished).toLocaleString("bn-BD", {
             day: "numeric",
             month: "long",

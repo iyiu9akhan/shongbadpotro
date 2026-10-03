@@ -17,7 +17,7 @@ const NavLinks = async () => {
   return (
     <div className="flex gap-5 justify-center">
       <Link
-        href="./"
+        href="/"
         className="hover:text-brand duration-300 transition-colors text-[18px]"
       >
         হোম
@@ -25,7 +25,7 @@ const NavLinks = async () => {
       {filteredNavs.map((navItem, ind) => (
         <Link
           key={ind}
-          href={navItem.slug}
+          href={`/category/${navItem.slug}`}
           className="hover:text-brand duration-300 transition-colors text-[18px]"
         >
           {navItem.title}

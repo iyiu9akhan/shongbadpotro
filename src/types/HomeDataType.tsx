@@ -37,4 +37,3 @@ export interface Section {
   count: number;
   articles: homeArticle[];
 }
-

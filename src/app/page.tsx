@@ -1,5 +1,5 @@
 import MainNews from "@/components/MainNews";
-import Marquee from "@/components/Marquee";
+// import Marquee from "@/components/Marquee";
 import MostRead from "@/components/MostRead";
 import OthersSection from "@/components/OthersSection";
 
@@ -14,8 +14,7 @@ export default async function Home() {
 
   return (
     <div>
-      <Marquee />
-      <div className="grid grid-cols-3 max-w-7xl mx-auto my-5 gap-8">
+      <div className="grid grid-cols-3 max-w-7xl mx-auto gap-8">
         <div className="col-span-2">
           <MainNews news={mainNews} />
           <OthersSection othersSection={othersSection} />

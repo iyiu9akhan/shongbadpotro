@@ -20,7 +20,7 @@ const Marquee = async () => {
   const data = await res.json();
   const headlines: NewsItem[] = data.data;
   return (
-    <div className="bg-brand sticky top-0 z-50 w-full">
+    <div className="bg-brand sticky top-0 z-50 w-full mb-5">
       <div className="max-w-7xl mx-auto">
         <div className="flex items-center">
           <p className="px-3 text-white bg-red-800 py-1.5">সর্বশেষ</p>
