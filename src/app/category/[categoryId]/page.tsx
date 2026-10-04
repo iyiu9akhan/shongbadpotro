@@ -8,9 +8,8 @@ const CategoryNews = async ({ params }: { params: { categoryId: string } }) => {
   );
   const data = await res.json();
   const categoryNews: homeArticle[] = data.data;
-  //   console.log(data);
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto mt-5">
       <p className="text-[25px] font-bold pb-1 mb-5 border-b-2 border-brand">
         {data.title}
       </p>

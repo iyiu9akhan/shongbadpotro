@@ -1,3 +1,10 @@
+export interface NavItem {
+  slug: string;
+  title: string;
+  topicId: string | null;
+  url: string;
+  scrapable: boolean;
+}
 export interface MostReadItem {
   id: string;
   title: string;
@@ -36,4 +43,18 @@ export interface Section {
   link: string | null;
   count: number;
   articles: homeArticle[];
+}
+export interface MarqueeNews {
+  id: string;
+  title: string;
+  description: string;
+  link: string;
+  imageUrl: string;
+  imageAlt: string;
+  category: string;
+  type: string;
+  isLive: boolean;
+  firstPublished: string;
+  lastPublished: string;
+  source: string;
 }

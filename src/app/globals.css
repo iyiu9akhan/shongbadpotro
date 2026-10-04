@@ -9,3 +9,6 @@
 @theme inline {
   --font-primaryEng: var(--font-oswald-next);
 }
+html {
+  overflow-y: scroll;
+}

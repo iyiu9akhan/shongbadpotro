@@ -3,6 +3,7 @@ import { Noto_Serif_Bengali, Quicksand  } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Marquee from "@/components/Marquee";
+import Footer from "@/components/Footer";
 
 const notoSerifBengali = Noto_Serif_Bengali({
   subsets: ["latin", "bengali"],
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Header />
         <Marquee />
         <div className="bg-[#FAFAFA]">{children}</div>
+        <Footer/>
       </body>
     </html>
   );

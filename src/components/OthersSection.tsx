@@ -8,13 +8,13 @@ interface OthersSectionProps {
 
 const OthersSection = ({ othersSection }: OthersSectionProps) => {
   return (
-    <div className="max-w-7xl mx-auto">
+    <div className="max-w-7xl mx-auto px-3 md:px-0">
       {othersSection.map((os) => (
         <div key={os.curationId}>
           <h1 className="border-b-2 border-brand text-[18px] font-bold pb-2 mb-3">
             {os.title}
           </h1>
-          <div className="grid grid-cols-3 gap-4 mb-10">
+          <div className="grid md:grid-cols-3 grid-cols-2 gap-4 mb-10">
             {os.articles.map((news) => (
               <NewsCard key={news.id} news={news} />
             ))}

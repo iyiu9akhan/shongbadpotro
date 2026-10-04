@@ -20,11 +20,11 @@ const NewsCard = ({ news }: NewsCardProps) => {
         </figure>
         <div className="p-3">
           <p className="text-brand text-sm mb-2">{news.category}</p>
-          <h2 className="text-lg font-bold group-hover:text-brand  duration-200 transition-all mb-2 line-clamp-1">
+          <h2 className="text-[14px] md:text-lg font-bold group-hover:text-brand  duration-200 transition-all mb-2 line-clamp-2 md:line-clamp-1">
             {news.title}
           </h2>
           <div className="overflow-hidden">
-            <p className="line-clamp-2 leading-6 text-black/70 mb-3">
+            <p className="text-[13px] md:text-sm line-clamp-3 md:line-clamp-2 md:leading-6 text-black/70 mb-3">
               {news.description}
             </p>
           </div>
