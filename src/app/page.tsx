@@ -23,9 +23,6 @@ export default async function Home() {
           <MostRead />
         </div>
       </div>
-      {/* <div>
-        <OthersSection othersSection={othersSection} />
-      </div> */}
     </div>
   );
 }
