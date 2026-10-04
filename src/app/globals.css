@@ -2,6 +2,10 @@
 @plugin "daisyui";
 
 @theme {
-    --color-brand :  #C60201;
+  --color-brand: #c60201;
 }
 /* #A30000 */
+
+@theme inline {
+  --font-primaryEng: var(--font-oswald-next);
+}

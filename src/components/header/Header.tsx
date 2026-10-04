@@ -1,5 +1,6 @@
 import Image from "next/image";
 import NavLinks from "./NavLinks";
+import Link from "next/link";
 
 function Header() {
   const date = new Date().toLocaleDateString("bn-BD", {
@@ -36,7 +37,7 @@ function Header() {
           </ul>
         </div>
         <div className="flex flex-col justify-center items-center">
-          <a className="" href="/">
+          <Link href={`/`}>
             <Image
               src="/brandLogo.png"
               alt="brand_logo"
@@ -44,7 +45,8 @@ function Header() {
               height={60}
               className="h-12 w-auto"
             />
-          </a>
+          </Link>
+
           <p className="text-[19px]">{date}</p>
         </div>
       </div>

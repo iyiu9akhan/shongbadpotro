@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
-import { Noto_Serif_Bengali } from "next/font/google";
+import { Noto_Serif_Bengali, Quicksand  } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header/Header";
 import Marquee from "@/components/Marquee";
 
 const notoSerifBengali = Noto_Serif_Bengali({
   subsets: ["latin", "bengali"],
+});
+
+const primarytext = Quicksand ({
+  subsets: ["latin"],
+  variable: "--font-oswald-next",
 });
 
 export const metadata: Metadata = {
@@ -17,12 +22,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       data-theme="light"
-      className={`${notoSerifBengali.className} h-full antialiased`}
+      className={`${notoSerifBengali.className} ${primarytext.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <Header />
         <Marquee />
-        {children}
+        <div className="bg-[#FAFAFA]">{children}</div>
       </body>
     </html>
   );

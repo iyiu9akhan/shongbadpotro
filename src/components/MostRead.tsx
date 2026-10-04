@@ -6,7 +6,7 @@ const MostRead = async () => {
   const mostRead = data.data;
 
   return (
-    <div className="rounded-lg border border-gray-200 p-4">
+    <div className="rounded-lg border border-gray-200 p-4 mt-5 bg-white">
       <h1 className="mb-3 text-[20px] text-black font-semibold">
         সর্বাধিক পঠিত
       </h1>

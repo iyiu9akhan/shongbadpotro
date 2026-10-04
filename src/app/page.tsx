@@ -2,15 +2,27 @@ import MainNews from "@/components/MainNews";
 // import Marquee from "@/components/Marquee";
 import MostRead from "@/components/MostRead";
 import OthersSection from "@/components/OthersSection";
+import { Section } from "@/types/HomeDataType";
 
 export default async function Home() {
   const res = await fetch("https://news-api-v2.vercel.app/api/news/sections");
   const data = await res.json();
-  const sections = data.data;
-  const mainNews = sections[0].articles;
 
+  // const sections = data.data;
+  // const filteredSections = sections.filter(
+  //   (section: Section) => section.articles[0].type === "article",
+  // );
+
+  // const mainNews = filteredSections[0].articles;
+  // const othersSection = filteredSections.slice(1);
+
+  const sections = data.data.map((section: Section) => ({
+    ...section,
+    articles: section.articles.filter((a) => a.type === "article"),
+  }));
+
+  const mainNews = sections[0].articles;
   const othersSection = sections.slice(1);
-  console.log(othersSection);
 
   return (
     <div>
