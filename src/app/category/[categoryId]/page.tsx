@@ -9,11 +9,11 @@ const CategoryNews = async ({ params }: { params: { categoryId: string } }) => {
   const data = await res.json();
   const categoryNews: homeArticle[] = data.data;
   return (
-    <div className="max-w-7xl mx-auto mt-5">
+    <div className="max-w-7xl mx-auto mt-5 px-3 md:px-0">
       <p className="text-[25px] font-bold pb-1 mb-5 border-b-2 border-brand">
         {data.title}
       </p>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
         {categoryNews.map((news) => (
           <NewsCard news={news} key={news.id} />
         ))}

@@ -17,7 +17,7 @@ const FullNews = async ({
   if (!newsDetails) notFound();
 
   return (
-    <div className="max-w-2xl mx-auto mt-5">
+    <div className="max-w-2xl mx-auto mt-5 px-3 md:px-0">
       <h1 className="text-2xl font-bold leading-snug">{newsDetails.title}</h1>
     </div>
   );

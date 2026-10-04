@@ -48,7 +48,7 @@ const MainNews = ({ news }: MainNewsProps) => {
       <div className="rounded-lg overflow-hidden border border-gray-200 bg-white">
         {othersNews.slice(0, 4).map((others) => (
           <Link key={others.id} href={`/newsDetails/${others.id}`}>
-            <div className="cursor-pointer hover:bg-gray-50 p-4 border-b border-gray-200 last:border-b-0">
+            <div className="cursor-pointer hover:bg-gray-100 px-4 py-2 md:py-4 border-b border-gray-200 last:border-b-0">
               <p className="text-brand text-sm">{others.category}</p>
               <p className="font-semibold text-md">{others.title}</p>
             </div>
