@@ -31,8 +31,12 @@ const FullNews = async ({
 
   return (
     <div className="max-w-2xl mx-auto mt-5 px-3 md:px-0 mb-18">
-      <h1 className="text-3xl font-bold leading-snug mb-4">{title}</h1>
-      <p className="text-lg text-neutral-600 mb-4">{description}</p>
+      <h1 className="text-3xl font-bold leading-snug mb-4 text-justify">
+        {title}
+      </h1>
+      <p className="text-lg text-neutral-600 mb-4 text-justify">
+        {description}
+      </p>
       <div className="mt-4 flex flex-wrap gap-x-3 gap-y-1 border-y border-neutral-200 py-3 text-sm text-neutral-500">
         <p>{author}</p>
         <p>{published}</p>
@@ -50,8 +54,10 @@ const FullNews = async ({
 
           if (body.type === "text") {
             return (
-              <p key={i} className="mb-4 leading-relaxed text-neutral-800">
-                {/* {body.text.replace(/\n/g, " ").trim()} */}
+              <p
+                key={i}
+                className="mb-4 leading-relaxed text-neutral-800 text-justify"
+              >
                 {body.text}
               </p>
             );
