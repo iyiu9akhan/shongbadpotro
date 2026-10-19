@@ -8,19 +8,6 @@ export default async function Home() {
   const res = await fetch("https://news-api-v2.vercel.app/api/news/sections");
   const data = await res.json();
 
-  // const sections = data.data;
-  // const filteredSections = sections.filter(
-  //   (section: Section) => section.articles[0].type === "article",
-  // );
-
-  // const mainNews = filteredSections[0].articles;
-  // const othersSection = filteredSections.slice(1);
-
-  // const sections = data.data.map((section: Section) => ({
-  //   ...section,
-  //   articles: section.articles.filter((a) => a.type === "article"),
-  // }));
-
   const sections: Section[] = data.data.flatMap((section: Section) => {
     const articles = section.articles.filter((a) => a.type === "article");
     return articles.length ? [{ ...section, articles }] : [];

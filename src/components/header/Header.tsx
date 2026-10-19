@@ -48,9 +48,8 @@ function Header() {
               height={60}
               className="md:h-12 w-auto"
             />
-          </Link>
-
           <p className="text-[13px] md:text-[19px]">{date}</p>
+          </Link>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">

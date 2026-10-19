@@ -10,9 +10,6 @@ const MainNews = ({ news }: MainNewsProps) => {
   const articles = news.filter((item) => !item.isLive);
   const [firstNews, ...othersNews] = articles;
 
-  // console.log("HERO:", JSON.stringify(firstNews, null, 2));
-  // console.log("OTHER:", JSON.stringify(othersNews[0], null, 2));
-
   return (
     <div className="grid gap-4 md:grid-cols-2 mb-10 mt-5 mx-3 md:mx-0">
       <Link href={`/newsDetails/${firstNews.id}`}>
